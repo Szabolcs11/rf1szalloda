@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class RealestateService {
-  private url: string = 'http://localhost:2004/';
+  private url: string = 'https://rf1.dev.kokeny-szabolcs.hu/';
   @Output() public realestateDataSubject: Subject<Realestate[]> = new Subject<
     Realestate[]
   >();
