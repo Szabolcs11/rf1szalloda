@@ -1,0 +1,86 @@
+main{
+    margin: 0; 
+    min-height: 76vh; 
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+h1{
+    color: #fff7de;
+    margin-bottom: 60px;
+}
+.reg{
+    width: 400px;
+    height: 500px;
+    padding: 40px;
+    margin-top: 5%;
+    background-color: #257180;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+button{
+    background-color: #fff7de;
+    border: none;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    color: #257180;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #d4c38d;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgb(77, 72, 72);
+}
+button:active{   
+    background-color: #d4c38d;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: inset 3px 3px 5px rgb(77, 72, 72);
+}
+label{
+    color: #fff7de;
+    padding: 0 20px;
+}
+input{
+    width: 200px;
+    height: 30px;
+}
+.email, .password, .name, .password_again, .phone{
+    margin-bottom: 30px;
+}
+.image{
+    z-index: -1;
+    position: absolute;
+    margin-top: 10%;
+    display: block;
+}
+
+
+@media (max-width: 1300px) {
+    img{
+        width: 1000px;
+        margin-top: 7%;
+    }
+}
+@media (max-width: 1000px) {
+    img{
+        width: 800px;
+        margin-top: 12%;
+    }
+}
+@media (max-width: 800px) {
+   .image{
+    display: none;
+}
+.login{
+    margin-bottom: 0;
+}
+}

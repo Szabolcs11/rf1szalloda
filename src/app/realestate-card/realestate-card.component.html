@@ -1,0 +1,23 @@
+<a [routerLink]="['/realestate', realestate.id]" (click)="sendData()">
+  <div class="ad">
+    <img src="szoba.png" alt="szoba" />
+    <div class="add-text">
+      <p>Ár:</p>
+      <p>
+        <b>{{ realestate.Price }}</b>
+      </p>
+      <p>Helyszín:</p>
+      <p>
+        <b>{{ realestate.City }}</b>
+      </p>
+      <p>Alapterület:</p>
+      <p>
+        <b>{{ realestate.SquareMeters }} m<sup>2</sup></b>
+      </p>
+      <p>Szoba:</p>
+      <p>
+        <b>{{ realestate.Rooms }}</b>
+      </p>
+    </div>
+  </div>
+</a>

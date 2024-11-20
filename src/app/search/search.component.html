@@ -1,0 +1,199 @@
+<main>
+  <h1>INGATLAN KERESÉS</h1>
+  <form [formGroup]="filterForm" (ngSubmit)="filterRealestates()">
+    <div class="details-container">
+      <div class="details-row">
+        <input
+          type="text"
+          placeholder="Hol keresel?"
+          id="city"
+          name="city"
+          formControlName="city"
+        /><br />
+      </div>
+      <div class="details-row">
+        <input
+          type="number"
+          placeholder="Szobák száma"
+          id="room"
+          name="room"
+          formControlName="room"
+        /><br />
+      </div>
+      <div class="price">
+        <p>Ár:</p>
+        <input
+          type="number"
+          placeholder="min"
+          id="pricemin"
+          name="pricemin"
+          formControlName="pricemin"
+        /><br />
+        <p>-</p>
+        <input
+          type="number"
+          placeholder="max"
+          id="pricemax"
+          name="pricemax"
+          formControlName="pricemax"
+        /><br />
+      </div>
+      <div class="price">
+        <p>Alapterület:</p>
+        <input
+          type="number"
+          placeholder="min"
+          id="areamin"
+          name="areamin"
+          formControlName="areamin"
+        /><br />
+        <p>-</p>
+        <input
+          type="number"
+          placeholder="max"
+          id="areamax"
+          name="areamax"
+          formControlName="areamax"
+        /><br />
+      </div>
+    </div>
+    <div class="prop-container">
+      <div class="build-block">
+        <!-- TODO: Ezeket is belevenni a formba -->
+        <h2>Épület típusa:</h2>
+        <div class="building-type">
+          <div class="buty-row">
+            <input type="checkbox" id="apartment" name="built" />
+            <label for="apartment">Lakás</label><br />
+          </div>
+          <div class="buty-row">
+            <input type="checkbox" id="business" name="built" />
+            <label for="business">Üzlethelyiség</label><br />
+          </div>
+          <div class="buty-row">
+            <input type="checkbox" id="house" name="built" />
+            <label for="house">Ház</label><br />
+          </div>
+          <div class="buty-row">
+            <input type="checkbox" id="office" name="built" />
+            <label for="office">Iroda</label><br />
+          </div>
+        </div>
+      </div>
+      <div class="prop-block">
+        <h2>Egyéb jellemzők:</h2>
+        <div class="other-things">
+          <div class="prop-row">
+            <input type="checkbox" id="elevator" name="elevator" />
+            <label for="elevator">Lift</label><br />
+          </div>
+          <div class="prop-row">
+            <input type="checkbox" id="barrier-free" name="barrier-free" />
+            <label for="barrier-free">Akadálymentesített</label><br />
+          </div>
+          <div class="prop-row">
+            <input type="checkbox" id="balcony" name="balcony" />
+            <label for="balcony">Erkély</label><br />
+          </div>
+          <div class="prop-row">
+            <input type="checkbox" id="garage" name="garage" />
+            <label for="garage">Garázs</label><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bt1">
+      <button type="submit">Keresés</button>
+      <button (click)="getRealestates()">Törlés</button>
+    </div>
+  </form>
+  <hr />
+  <div class="arrangement">
+    <div class="text">
+      <i class="bi bi-arrow-down-up"></i>
+      <h3>Rendezés</h3>
+    </div>
+    <form
+      [formGroup]="sortForm"
+      (ngSubmit)="sortRealestates(sortForm.controls.sortBy.value)"
+    >
+      <div class="sorted-by">
+        <div class="arr-row">
+          <input
+            type="radio"
+            id="price-increasing"
+            formControlName="sortBy"
+            value="incByPrice"
+            checked
+          />
+          <label for="price-increasing">Ár szerint növekvő</label><br />
+        </div>
+        <div class="arr-row">
+          <input
+            type="radio"
+            id="price-decreasing"
+            formControlName="sortBy"
+            value="decByPrice"
+          />
+          <label for="price-decreasing">Ár szerint csökkenő</label><br />
+        </div>
+        <div class="arr-row">
+          <input
+            type="radio"
+            id="growing-by-subarea"
+            formControlName="sortBy"
+            value="incByArea"
+          />
+          <label for="growing-by-subarea">Alapterület szerint növekvő</label
+          ><br />
+        </div>
+        <div class="arr-row">
+          <input
+            type="radio"
+            id="decreasing-by-subarea"
+            formControlName="sortBy"
+            value="decByArea"
+          />
+          <label for="decreasing-by-subarea">Alapterület szerint csökkenő</label
+          ><br />
+        </div>
+        <div class="arr-row">
+          <input
+            type="radio"
+            id="growing-by-rooms"
+            formControlName="sortBy"
+            value="incByRooms"
+          />
+          <label for="growing-by-rooms">Szobák száma szerint növekvő</label
+          ><br />
+        </div>
+        <div class="arr-row">
+          <input
+            type="radio"
+            id="rooms-by-decreasing"
+            formControlName="sortBy"
+            value="decByRooms"
+          />
+          <label for="rooms-by-decreasing">Szobák száma szerint csökkenő</label
+          ><br />
+        </div>
+      </div>
+      <div class="bt1">
+        <button type="submit">Rendezés</button>
+      </div>
+    </form>
+  </div>
+
+  <h3>Kínálatunk:</h3>
+  <div class="ads">
+    @if(!filterFound){
+    <h2>Sajnáljuk, nincs a keresésnek megfelelő ingatlan! :(</h2>
+    }
+    <div *ngFor="let realestate of realestates">
+      <app-realestate-card [realestate]="realestate"></app-realestate-card>
+    </div>
+  </div>
+
+  <p class="next">Következő oldal</p>
+  <i class="bi bi-arrow-right"></i>
+</main>

@@ -1,0 +1,92 @@
+<main>
+  <div class="data">
+    <div class="imagess">
+      <img src="szoba1.png" alt="első kép" />
+      <div class="smallimages">
+        <img src="szoba2.png" alt="szoba" />
+        <img src="szoba3.png" alt="szoba" />
+        <img src="szoba4.png" alt="szoba" />
+      </div>
+    </div>
+    <div class="description">
+      <div class="title">
+        <h3>{{ realestate?.City }} {{ realestate?.Type }}</h3>
+        <div class="bt1">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-heart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="details">
+        <div class="important-details">
+          <div class="important">
+            <h5>Irányítószám:</h5>
+            <p>{{ realestate?.PostalCode }}</p>
+          </div>
+          <!--<div class="important">
+            <h5>Cím:</h5>
+            <p>Fő fasor 20.</p>
+          </div>-->
+          <div class="important">
+            <h5>Szobák száma:</h5>
+            <p>{{ realestate?.Rooms }}</p>
+          </div>
+          <div class="important">
+            <h5>Alapterület:</h5>
+            <p>{{ realestate?.SquareMeters }} m<sup>2</sup></p>
+          </div>
+          <div class="important">
+            <h5>Feltöltés:</h5>
+            <p>
+              <a href="profile"> {{ realestate?.UserFullName }} </a>
+            </p>
+          </div>
+        </div>
+        <div class="additional-details">
+          <div class="additional">
+            <h5>Épület típusa:</h5>
+            <p>{{ realestate?.Type }}</p>
+            <h5>Egyéb jellemzők:</h5>
+            <p>Lift</p>
+            <p>Garázs</p>
+          </div>
+        </div>
+      </div>
+      <div class="price">
+        <h4>Ár:</h4>
+        <h3>{{ realestate?.Price }}</h3>
+      </div>
+
+      <div class="bt2">
+        <button>Foglalás</button>
+      </div>
+    </div>
+  </div>
+  <h4>Leírás:</h4>
+  <div class="text">
+    <p>{{ realestate?.Description }}</p>
+  </div>
+  <h4>Elhelyezkedés:</h4>
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.1923910778964!2d20.166345676735315!3d46.24640298090975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474488446fab2e7f%3A0x55410129d383f83d!2sSzeged%2C%20F%C5%91%20fasor%2020%2C%206726!5e0!3m2!1shu!2shu!4v1731952161800!5m2!1shu!2shu"
+      width="80%"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</main>

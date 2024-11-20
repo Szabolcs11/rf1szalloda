@@ -1,0 +1,38 @@
+<main>
+  <div class="left">
+    <a href="home"><img src="logo_sm.png" alt="Logo" /></a>
+  </div>
+  <div class="right">
+    <button class="header-btn" routerLink="/home">kezdőlap</button>
+    <button class="header-btn" routerLink="/about-us">rólunk</button>
+    <button class="header-btn" routerLink="/search">ingatlan keresés</button>
+    <button class="header-btn" routerLink="/login">bejelentkezés</button>
+    <button class="header-btn" routerLink="/registration">regisztráció</button>
+  </div>
+  <div class="burger-menu">
+    <button class="burger-icon" (click)="burgerClick()">
+      <img src="burger-icon.png" alt="Burger" />
+    </button>
+    <div class="burger-btns" [class.hide]="hideBurger">
+      <button class="header-btn" routerLink="/home" (click)="burgerClick()">
+        kezdőlap
+      </button>
+      <button class="header-btn" routerLink="/about-us" (click)="burgerClick()">
+        rólunk
+      </button>
+      <button class="header-btn" routerLink="/search" (click)="burgerClick()">
+        ingatlan keresés
+      </button>
+      <button class="header-btn" routerLink="/login" (click)="burgerClick()">
+        bejelentkezés
+      </button>
+      <button
+        class="header-btn"
+        routerLink="/registration"
+        (click)="burgerClick()"
+      >
+        regisztráció
+      </button>
+    </div>
+  </div>
+</main>

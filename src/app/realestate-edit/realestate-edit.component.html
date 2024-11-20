@@ -1,0 +1,143 @@
+<main>
+    <h1>INGATLAN SZERKESZTÉSE</h1>
+    <div class="details-container">
+        <div class="details-row">
+            <label for="city">Település</label><br>
+            <input type="text" id="city" name="city" required><br>
+        </div>
+        <div class="details-row">
+            <label for="postcode">Irányítószám</label><br>
+            <input type="number" id="postcode" name="postcode" maxlength="4" required><br>
+        </div>
+        <div class="details-row">
+            <label for="address">Cím</label><br>
+            <input type="text" id="address" name="address" required><br>
+        </div>
+        <div class="details-row">
+            <label for="room">Szobaszám</label><br>
+            <input type="number" id="room" name="room" required><br>
+        </div>
+        <div class="details-row">
+            <label for="area">Alapterület</label><br>
+            <input type="number" placeholder="m²" id="area" name="area" required><br>
+        </div>
+        <div class="details-row">
+            <label for="price">Ár</label><br>
+            <input type="number" placeholder="Ft" id="price" name="price" required><br>
+        </div>
+    </div>
+    <div class="prop-container">
+        <div class="build-block">
+            <h2>Épület típusa:</h2>
+        <div class="building-type">
+                <div class="buty-row">
+                    <input type="radio" id="apartment" name="built">
+                    <label for="apartment">Lakás</label><br>
+                </div>
+                <div class="buty-row">
+                    <input type="radio" id="business" name="built">
+                    <label for="business">Üzlethelyiség</label><br>
+                </div>
+                <div class="buty-row">
+                    <input type="radio" id="house" name="built">
+                    <label for="house">Ház</label><br>
+                </div>
+                <div class="buty-row">
+                    <input type="radio" id="office" name="built">
+                    <label for="office">Iroda</label><br>
+                </div>
+            </div>
+        </div>
+        <div class="prop-block">
+            <h2>Egyéb jellemzők:</h2>
+            <div class="other-things">
+                <div class="prop-row">
+                    <input type="checkbox" id="elevator" name="elevator">
+                    <label for="elevator">Lift</label><br>
+                </div>
+                <div class="prop-row">
+                    <input type="checkbox" id="barrier-free" name="barrier-free">
+                    <label for="barrier-free">Akadálymentesített</label><br>
+                </div>
+                <div class="prop-row">
+                    <input type="checkbox" id="balcony" name="balcony">
+                    <label for="balcony">Erkély</label><br>
+                </div>
+                <div class="prop-row">
+                    <input type="checkbox" id="garage" name="garage">
+                    <label for="garage">Garázs</label><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bt1">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+            </svg>
+            Képek csatolása
+        </button>
+    </div>
+    <div class="gallery-container">
+        <div class="gallery">
+            <a target="_blank" href="szoba.png">
+            <img src="szoba.png" alt="Hiba a kép betöltésekor" width="365" height="320">
+            </a>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="szoba.png">
+            <img src="szoba.png" alt="Hiba a kép betöltésekor" width="365" height="320">
+            </a>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="szoba.png">
+            <img src="szoba.png" alt="Hiba a kép betöltésekor" width="365" height="320">
+            </a>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="szoba.png">
+            <img src="szoba.png" alt="Hiba a kép betöltésekor" width="365" height="320">
+            </a>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="desc">
+        <h2>Leírás:</h2><br>
+        <textarea name="txtarea" id="txtarea"></textarea><br>
+    </div>
+    <div class="bt2">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+            </svg>
+            Ingatlan frissítése
+        </button>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+            </svg>
+            Ingatlan törlése
+        </button>
+    </div>
+</main>

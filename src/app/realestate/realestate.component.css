@@ -1,0 +1,174 @@
+main {
+    margin: 2% 10%;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h3 {
+    color: #257180;
+    margin: 10px 100px 10px 20px;
+}
+
+h4 {
+    margin: 10px 30px;
+
+}
+
+.important-details {
+    margin: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagess {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.important {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px;
+
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+}
+
+h5 {
+    margin: 15px;
+}
+
+p {
+    margin: 15px;
+}
+
+.text {
+    border: 5px solid;
+    border-color: #257180;
+    padding: 5px;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt1 {
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.bt1 button,
+.bt2 button {
+    background-color: #fff7de;
+    border: none;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    color: #257180;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bt1 button {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt1 svg {
+    width: 30px;
+    height: auto;
+
+}
+
+.bt1 button:hover,
+.bt2 button:hover {
+    background-color: #d4c38d;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgb(77, 72, 72);
+}
+
+.bt1 button:active,
+.bt2 button:active {
+    background-color: #d4c38d;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: inset 3px 3px 5px rgb(77, 72, 72);
+}
+
+.bt2 {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagess {
+    margin: 20px;
+}
+
+.smallimages img {
+    margin: 20px 10px;
+    width: 150px;
+}
+element.style {
+    width: 80%;
+}
+
+a{
+    color: black;
+}
+
+@media (max-width: 915px) {
+    .data{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 650px) {
+.imagess img{
+    width: 300px;
+}
+.smallimages img{
+    width: 80px;
+}
+}

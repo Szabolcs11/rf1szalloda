@@ -1,0 +1,23 @@
+main {
+  background-color: #257180;
+}
+
+.socials {
+  text-align: center;
+  padding-block: 20px;
+}
+
+.socials img {
+  margin-inline: 15px;
+}
+
+hr {
+  width: 77%;
+  color: #fff7de;
+}
+
+.credentials {
+  text-align: center;
+  color: #fff7de;
+  padding-block: 20px;
+}

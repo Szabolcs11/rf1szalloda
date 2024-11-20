@@ -1,0 +1,356 @@
+main {
+  text-align: center;
+}
+h1 {
+  color: #257180;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 50px;
+}
+p {
+  font-size: 20px;
+}
+.price p {
+  margin-top: 3px;
+}
+.ad-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.ad-text p {
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+.details-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 750px;
+  padding: 20px;
+}
+.details-row {
+  display: flex;
+  height: 70px;
+  width: 400px;
+}
+.price {
+  display: flex;
+  height: 70px;
+  width: 400px;
+}
+.price input {
+  justify-self: center;
+  right: 14%;
+  left: 3rem;
+  margin-left: 0px;
+  border: 3px solid #257180;
+  border-width: 0.15rem;
+  width: 30%;
+  height: 50%;
+  font-size: 17px;
+}
+.ads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.ad {
+  display: flex;
+  flex-direction: row;
+  padding-right: 200px;
+  border: 10px solid #fff7de;
+  margin: 2% 2%;
+}
+.buty-row {
+  position: relative;
+  display: block;
+}
+.sorted-by {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 10%;
+}
+.arr-row label {
+  justify-self: left;
+  padding-bottom: 1.5%;
+  display: flex;
+  font-weight: bold;
+  margin-left: 0px;
+}
+.arr-row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.buty-row input[type="radio"],
+.arr-row input[type="radio"] {
+  margin: 0;
+  width: 30px;
+  height: 24px;
+  vertical-align: middle;
+  border: 2px solid #257180;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.buty-row input[type="radio"]::before,
+.arr-row input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #257180;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buty-row input[type="radio"]:checked::after,
+.arr-row input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  background-color: #257180;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h3 {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+.next {
+  text-align: right;
+  margin-right: 10%;
+  color: #257180;
+  text-decoration-line: underline;
+}
+
+.ad img {
+  margin-right: 5%;
+}
+.details-row input {
+  justify-self: center;
+  right: 14%;
+  left: 3rem;
+  margin-left: 0px;
+  border: 3px solid #257180;
+  border-width: 0.15rem;
+  width: 70%;
+  height: 50%;
+  font-size: 17px;
+}
+.details-container input::placeholder {
+  text-align: right;
+  color: #888;
+}
+.prop-container {
+  text-align: center;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 40%;
+  margin: 0 auto;
+  padding-right: 0;
+}
+.build-block {
+  display: block;
+  padding-right: 0%;
+  text-align: left;
+}
+.prop-container h2 {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.building-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.buty-row {
+  position: relative;
+  padding: 5px;
+}
+
+.prop-block {
+  display: block;
+  padding-right: 0%;
+  text-align: left;
+}
+
+.other-things {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.prop-row {
+  position: relative;
+  padding: 5px;
+}
+
+.building-type input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1c5f5f;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-color: white;
+}
+.building-type input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.building-type input[type="checkbox"]:checked {
+  background-color: #257180;
+  border-color: #257180;
+}
+
+.prop-row input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1c5f5f;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-color: white;
+}
+
+.prop-row input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.prop-row input[type="checkbox"]:checked {
+  background-color: #257180;
+  border-color: #257180;
+}
+
+.bt1 {
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+.bt1 button {
+  background-color: #fff7de;
+  border: none;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  color: #257180;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+.bt1 button:hover {
+  background-color: #d4c38d;
+  transition: 1s;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgb(77, 72, 72);
+}
+.bt1 button:active {
+  background-color: #d4c38d;
+  transition: 1s;
+  cursor: pointer;
+  box-shadow: inset 3px 3px 5px rgb(77, 72, 72);
+}
+
+hr {
+  width: 80%;
+  border-width: 5px;
+  border-style: solid;
+  color: #257180;
+}
+a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+@media (max-width: 2000px) {
+  .ad {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 1620px) {
+  .prop-container {
+    display: block;
+  }
+}
+@media (max-width: 1500px) {
+  .ad {
+    padding-right: 20px;
+  }
+  .ad img {
+    width: 300px;
+  }
+}
+@media (max-width: 915px) {
+  .details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+  }
+  .other-things {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .ad {
+    flex-direction: column;
+    padding-right: 0;
+    align-items: center;
+  }
+  .ad img {
+    margin-right: 0%;
+    width: 300px;
+  }
+  .prop-container {
+    display: block;
+  }
+  .building-type {
+    display: block;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}

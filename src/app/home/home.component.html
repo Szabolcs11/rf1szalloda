@@ -1,0 +1,62 @@
+<main>
+  <div class="banner">
+    <div class="banner_text">
+      <h1>Lorem Ipsum</h1>
+      <h3>
+        dolor sit amet, consectetur adipiscing elit. Donec ultrices erat sit
+        amet
+      </h3>
+    </div>
+    <img src="bannerkep.png" alt="banner" />
+  </div>
+  <div class="about">
+    <div class="build">
+      <img src="pipaa.png" alt="pipa" width="300px" />
+      <p>aoreet. Morbi arcu eros, congue non magna ac,</p>
+    </div>
+    <div class="build">
+      <img src="buildings 1.png" alt="epulet" />
+      <p>aoreet. Morbi arcu eros, congue non magna ac,</p>
+    </div>
+    <div class="build">
+      <img src="emoji-laughing 1.png" alt="emoji" width="200px" />
+      <p>aoreet. Morbi arcu eros, congue non magna ac,</p>
+    </div>
+  </div>
+  <p class="cim">Legújabb Hirdetéseink</p>
+  <div class="ads">
+    <div *ngFor="let realestate of realestates">
+      <app-realestate-card [realestate]="realestate"></app-realestate-card>
+    </div>
+  </div>
+  <p class="cim">Értékesléseink</p>
+  <div class="reviews">
+    <div class="rating">
+      <img src="pasi.png" alt="pasi" />
+      <p><b>Gáspár Laszló</b></p>
+      <p>
+        Quisque lobortis quam in rhoncus pulvinar. Integer at arcu magna. Sed
+        sed tristique ligula. Aliquam ullamcorper dui nec nisl suscipit, non
+        fringilla dolor bibendum.
+      </p>
+    </div>
+    <div class="rating-women">
+      <img src="csaj.png" alt="pasi" width="150px" />
+      <p><b>Lara croft</b></p>
+      <p>
+        Quisque lobortis quam in rhoncus pulvinar. Integer at arcu magna. Sed
+        sed tristique ligula. Aliquam ullamcorper dui nec nisl suscipit, non
+        fringilla dolor bibendum.
+      </p>
+    </div>
+    <div class="rating">
+      <img src="pasi.png" alt="pasi" />
+      <p><b>Gáspár Laszló</b></p>
+      <p>
+        Quisque lobortis quam in rhoncus pulvinar. Integer at arcu magna. Sed
+        sed tristique ligula. Aliquam ullamcorper dui nec nisl suscipit, non
+        fringilla dolor bibendum.
+      </p>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,71 @@
+main {
+  max-width: 100%;
+  background-color: #257180;
+  padding: 10px 10%;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  margin-left: 20%;
+  display: flex;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-icon {
+  background: transparent;
+  border: none;
+  margin-inline: 10px;
+  cursor: pointer;
+}
+
+.burger-btns {
+  background-color: #257180;
+  top: 85px;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  text-align: center;
+  z-index: 9;
+}
+
+.hide {
+  display: none;
+}
+
+.header-btn {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  padding: 5px 5px;
+  margin-inline: 10px;
+  color: #fff7de;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*TODO: Reszponzívvá tenni*/
+
+@media (max-width: 1100px) {
+  main {
+    justify-content: space-between;
+  }
+  .right {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .header-btn {
+    margin-block: 5px;
+    border-bottom: 1px solid #fff7de;
+    padding-block: 20px;
+  }
+}
