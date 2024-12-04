@@ -3,7 +3,6 @@ main{
     min-height: 76vh; 
     flex: 1;
     text-align: center;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,24 +11,12 @@ h1{
     color: #257180;
     text-align: center;
 }
-.list{
-    display: flex;
-    flex-wrap: wrap;
-}
-.profile{
-    border:solid 2px #257180;
-    height: auto;
-    width: 280px;
-    margin: 20px;
-}
-.profile:hover{
-    opacity: 70%;
-}
+
 button{
     background-color: #fff7de;
     border: none;
-    width: 200px;
-    height: 70px;
+    width: 220px;
+    height: 40px;
     text-align: center;
     color: #257180;
     font-weight: 500;
@@ -48,8 +35,4 @@ button:active{
     transition: 1s;
     cursor: pointer;
     box-shadow: inset 3px 3px 5px rgb(77, 72, 72);
-}
-a{
-    text-decoration: none;
-    color: black    ;
 }

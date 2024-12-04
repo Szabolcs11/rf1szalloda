@@ -1,26 +1,10 @@
 <main>
-    <h1>Felhasználók kilistázása</h1>
-    <div class="list">
-        <a herf="" class="profile">
-            <p>Név:</p>
-            <p>Alma</p>
-            <p>Email:</p>
-            <p>jj.com</p>
-            <p>Telefonszam:</p>
-            <p>021023</p>
-            <button type="submit"> Felhasználó törlése </button> 
-            <button type="submit"> Felhasználó szerkesztése </button> 
-
-        </a>
-        <a href="" class="profile">
-            <p>Név:</p>
-            <p>Alma</p>
-            <p>Email:</p>
-            <p>jjs.com</p>
-            <p>Telefonszam:</p>
-            <p>021023</p>
-            <button type="submit"> Felhasználó törlése </button> 
-            <button type="submit"> Felhasználó szerkesztése </button> 
-        </a>
-    </div>
+    <h1>Ingatlanok kilistázása</h1>
+    <div class="ads">  
+    <div *ngFor="let realestate of realestates">
+        <app-realestate-card [realestate]="realestate"></app-realestate-card>
+          <button type="submit">Ingatlan törlése</button>
+          <button type="submit">Ingatlan szerkesztése</button>
+        </div>
+      </div>
 </main>

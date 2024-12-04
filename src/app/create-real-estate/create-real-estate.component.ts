@@ -41,7 +41,7 @@ export class CreateRealEstateComponent implements OnInit {
   }
 
   loadFeatures() {
-    this.http.get('https://rf1.dev.kokeny-szabolcs.hu/realestate/features').subscribe(
+    this.http.get('http://localhost:2004/realestate/features').subscribe(
       (response: any) => {
         if (response.success) {
           this.availableFeatures = response.features.map((feature: any) => ({
@@ -88,7 +88,7 @@ export class CreateRealEstateComponent implements OnInit {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
     this.http
-      .post('https://rf1.dev.kokeny-szabolcs.hu/realestate/create', data, { headers })
+      .post('http://localhost:2004/realestate/create', data, { headers })
       .subscribe(
         (response: any) => {
           if (response.success) {
