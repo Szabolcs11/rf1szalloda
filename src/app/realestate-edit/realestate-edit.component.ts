@@ -63,7 +63,7 @@ export class RealestateEditComponent implements OnInit {
 
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     this.http
-      .get(`http://localhost:2004/realestate/details/${this.realEstateId}`, {
+      .get(`https://rf1.dev.kokeny-szabolcs.hu/realestate/details/${this.realEstateId}`, {
         headers,
       })
       .subscribe(
@@ -121,7 +121,7 @@ export class RealestateEditComponent implements OnInit {
 
     this.http
       .post(
-        `http://localhost:2004/realestate/update/${this.realEstateId}`,
+        `https://rf1.dev.kokeny-szabolcs.hu/realestate/update/${this.realEstateId}`,
         requestData,
         { headers }
       )

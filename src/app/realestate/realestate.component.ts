@@ -59,7 +59,7 @@ export class RealestateComponent implements OnInit {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
     this.http
-      .post('http://localhost:2004/realestate/reserve', data, { headers })
+      .post('https://rf1.dev.kokeny-szabolcs.hu/realestate/reserve', data, { headers })
       .subscribe(
         (response: any) => {
           if (response.success) {

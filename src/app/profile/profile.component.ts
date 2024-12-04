@@ -38,7 +38,7 @@ export class UserProfileComponent implements OnInit {
 
   getUserProfile() {
     this.http
-      .get(`http://localhost:2004/user/profile/${this.userId}`)
+      .get(`https://rf1.dev.kokeny-szabolcs.hu/user/profile/${this.userId}`)
       .subscribe(
         (response: any) => {
           if (response.success) {

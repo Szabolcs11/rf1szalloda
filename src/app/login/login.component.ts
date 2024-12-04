@@ -32,7 +32,7 @@ export class LoginComponent {
       Password: this.password,
     };
 
-    this.http.post('http://localhost:2004/user/login', data).subscribe(
+    this.http.post('https://rf1.dev.kokeny-szabolcs.hu/user/login', data).subscribe(
       (response: any) => {
         if (response.success) {
           alert(response.message);
