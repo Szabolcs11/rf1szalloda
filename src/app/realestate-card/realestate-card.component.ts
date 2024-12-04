@@ -23,6 +23,5 @@ export class RealestateCardComponent implements OnInit {
 
   sendData(): void {
     this.realestateService.raiseRealestateData(this.realestates);
-    console.log('Raised');
   }
 }

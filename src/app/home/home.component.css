@@ -1,239 +1,233 @@
 .banner_text {
-    width: 30%;
-    padding: 20px 30px;
-    background-color: #fff7de;
-    z-index: 1;
-    position: absolute;
-    margin-top: 25%;
-    margin-right: -40%;
+  width: 30%;
+  padding: 20px 30px;
+  background-color: #fff7de;
+  z-index: 1;
+  position: absolute;
+  margin-top: 25%;
+  margin-right: -40%;
 }
 
 .banner {
-    display: flex;
-    padding: 50px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner img {
-    width: 1500px;
+  width: 1500px;
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 h3 {
-    display: block;
+  display: block;
 }
 
 .cim {
-    font-size: 36px;
-    color: #257180;
-    text-align: center;
-    font-weight: 600;
+  font-size: 36px;
+  color: #257180;
+  text-align: center;
+  font-weight: 600;
 }
 
 .about {
-    background-color: #257180;
-    padding: 5%;
-    margin: 5% 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  background-color: #257180;
+  padding: 5%;
+  margin: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .build {
-    width: 200px;
-    margin: 2% 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 200px;
+  margin: 2% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .build img {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 .build p {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
-a{
-    color: black;
-    text-decoration: none;
+a {
+  color: black;
+  text-decoration: none;
 }
 .ads {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  gap: 20px;
 }
 
 .ad {
-    display: flex;
-    flex-direction: row;
-    padding-right: 200px;
-    border: 10px solid #fff7de;
-    margin: 2% 2%;
+  display: flex;
+  flex-direction: row;
+  padding-right: 200px;
+  border: 10px solid #fff7de;
+  margin: 2% 2%;
 }
 
 .ad img {
-    margin-right: 5%;
+  margin-right: 5%;
 }
 
 .reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff7de;
-    padding: 50px;
-    margin: 2% 5%;
-    width: 400px;
-    height: 500px;
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff7de;
+  padding: 50px;
+  margin: 2% 5%;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
 }
 
 .rating p {
-    text-align: center;
-    color: #257180;
-    font-weight: 300;
+  text-align: center;
+  color: #257180;
+  font-weight: 300;
 }
-.buty-row{
-    position: relative;
-    padding: 5px;
+.buty-row {
+  position: relative;
+  padding: 5px;
 }
 .rating-women {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #257180;
-    padding: 50px;
-    margin: 2% 5%;
-    width: 400px;
-    height: 500px;
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #257180;
+  padding: 50px;
+  margin: 2% 5%;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
 }
 
 .rating-women p {
-
-    text-align: center;
-    color: #fff7de;
+  text-align: center;
+  color: #fff7de;
 }
 
 @media (max-width: 2000px) {
-    .rating-women {
-        width: 150px;
-        height: auto;
-    }
-    .rating {
-        width: 150px;
-        height: auto;
-    }
+  .rating-women {
+    width: 150px;
+    height: auto;
+  }
+  .rating {
+    width: 150px;
+    height: auto;
+  }
 
+  .ad {
+    padding-right: 20px;
+  }
 
-    .ad {
-        padding-right: 20px;
-    }
-
-    .banner_text {
-
-        margin-top: 25%;
-        margin-right: -60%;
-    }
+  .banner_text {
+    margin-top: 25%;
+    margin-right: -60%;
+  }
 }
 
 @media (max-width: 1500px) {
-    .build {
-        margin: 2% 5%;
-    }
+  .build {
+    margin: 2% 5%;
+  }
 
-    .reviews {
-        flex-wrap: nowrap;
-    }
+  .reviews {
+    flex-wrap: nowrap;
+  }
 
-    .ad {
-        padding-right: 20px;
-    }
-    .ad img{
-        width: 300px;
-    }
+  .ad {
+    padding-right: 20px;
+  }
+  .ad img {
+    width: 300px;
+  }
 
-
-    .banner_text {
-        margin-top: 25%;
-        margin-right: -70%;
-        width: 20%;
-    }
+  .banner_text {
+    margin-top: 25%;
+    margin-right: -70%;
+    width: 20%;
+  }
 }
 
 @media (max-width: 1300px) {
+  .banner img {
+    width: 700px;
+  }
 
-    .banner img {
-        width: 700px;
-    }
+  .reviews {
+    flex-wrap: wrap;
+  }
 
-    .reviews {
-        flex-wrap: wrap;
-    }
+  .banner_text {
+    width: 30%;
+    margin-right: -60%;
+  }
 
-    .banner_text {
-        width: 30%;
-        margin-right: -60%;
-    }
+  .banner_text h1 {
+    font-size: 20px;
+  }
 
-    .banner_text h1 {
-        font-size: 20px;
-    }
-
-    .banner_text h3 {
-        font-size: 15px;
-    }
+  .banner_text h3 {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 750px) {
+  .banner img {
+    width: 500px;
+  }
 
-    .banner img {
-        width: 500px;
-    }
+  .build img {
+    width: 100px;
+  }
 
-    .build img {
-        width: 100px;
-    }
+  h3 {
+    display: none;
+  }
 
-    h3 {
-        display: none;
-    }
-
-    .banner_text {
-        width: 15%;
-    }
-    .ad {
-        flex-direction: column;
-        padding-right: 0;
-        align-items: center;
-    }
-    .ad img {
-        margin-right: 0%;
-        width: 300px;
-    }
-    
+  .banner_text {
+    width: 15%;
+  }
+  .ad {
+    flex-direction: column;
+    padding-right: 0;
+    align-items: center;
+  }
+  .ad img {
+    margin-right: 0%;
+    width: 300px;
+  }
 }
 @media (max-width: 400px) {
-    .banner img {
-        width: 300px;
-    }
+  .banner img {
+    width: 300px;
+  }
 }

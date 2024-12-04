@@ -14,7 +14,6 @@ import { CommonModule } from '@angular/common';
 })
 export class SearchComponent implements OnInit {
   realestates: Realestate[] = [];
-  filterFound: boolean = true;
   sortForm = new FormGroup({
     sortBy: new FormControl('incByPrice'),
   });
@@ -38,9 +37,7 @@ export class SearchComponent implements OnInit {
     this.realestateService.getRealEstates().subscribe((res: any) => {
       this.realestates = res.realEstates;
     });
-    this.filterFound = true;
     this.filterForm.reset();
-    console.log(this.realestates);
   }
   sortRealestates(order: string | null): void {
     if (order === 'incByPrice') {
@@ -78,14 +75,6 @@ export class SearchComponent implements OnInit {
         ? realestate.SquareMeters <= +areamax
         : true;
 
-      this.filterFound =
-        matchesCity &&
-        matchesRoom &&
-        matchesPriceMin &&
-        matchesPriceMax &&
-        matchesAreaMin &&
-        matchesAreaMax;
-      console.log(this.filterFound);
       return (
         matchesCity &&
         matchesRoom &&

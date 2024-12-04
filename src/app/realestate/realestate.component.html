@@ -49,7 +49,9 @@
           <div class="important">
             <h5>Feltöltés:</h5>
             <p>
-              <a href="profile"> {{ realestate?.UserFullName }} </a>
+              <a [routerLink]="['/profile', realestate?.UserID]">
+                {{ realestate?.UserFullName }}
+              </a>
             </p>
           </div>
         </div>
@@ -67,9 +69,14 @@
         <h4>Ár:</h4>
         <h3>{{ realestate?.Price }}</h3>
       </div>
+      <div *ngIf="isReserved">
+        <p>Az ingatlan már le van foglalva.</p>
+      </div>
 
       <div class="bt2">
-        <button>Foglalás</button>
+        <button (click)="reserveRealEstate()" [disabled]="realestate?.reserved">
+          Foglalás
+        </button>
       </div>
     </div>
   </div>

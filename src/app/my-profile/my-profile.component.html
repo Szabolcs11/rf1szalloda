@@ -1,0 +1,45 @@
+<main>
+  <h1>Profilom Szerkesztése</h1>
+  <form #profileForm="ngForm" (ngSubmit)="onSubmit(profileForm)">
+    <div *ngIf="userData">
+      <label>Név:</label>
+      <input type="text" name="Name" [(ngModel)]="userData.Name" required />
+
+      <label>Email:</label>
+      <input type="email" name="Email" [(ngModel)]="userData.Email" required />
+
+      <label>Telefonszám:</label>
+      <input type="text" name="Phone" [(ngModel)]="userData.Phone" required />
+
+      <label>Leírás:</label>
+      <textarea
+        name="Description"
+        [(ngModel)]="userData.Description"
+      ></textarea>
+
+      <h2>Jelszó megváltoztatása</h2>
+      <label>Régi jelszó:</label>
+      <input
+        type="password"
+        name="OldPassword"
+        [(ngModel)]="passwordData.OldPassword"
+      />
+
+      <label>Új jelszó:</label>
+      <input
+        type="password"
+        name="NewPassword"
+        [(ngModel)]="passwordData.NewPassword"
+      />
+
+      <label>Új jelszó megerősítése:</label>
+      <input
+        type="password"
+        name="NewPasswordAgain"
+        [(ngModel)]="passwordData.NewPasswordAgain"
+      />
+
+      <button type="submit">Profil frissítése</button>
+    </div>
+  </form>
+</main>

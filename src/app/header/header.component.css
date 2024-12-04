@@ -4,10 +4,10 @@ main {
   padding: 10px 10%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .right {
-  margin-left: 20%;
   display: flex;
 }
 
@@ -48,8 +48,6 @@ main {
   font-weight: 500;
   cursor: pointer;
 }
-
-/*TODO: Reszponzívvá tenni*/
 
 @media (max-width: 1100px) {
   main {

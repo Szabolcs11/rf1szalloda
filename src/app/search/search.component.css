@@ -38,6 +38,14 @@ p {
   height: 70px;
   width: 400px;
 }
+
+.details-row:nth-child(2) {
+  display: flex;
+  justify-content: right;
+  height: 70px;
+  width: 400px;
+}
+
 .price {
   display: flex;
   height: 70px;
@@ -158,6 +166,10 @@ h3 {
   width: 70%;
   height: 50%;
   font-size: 17px;
+}
+
+.details-row:nth-child(2) input {
+  margin-right: 20px;
 }
 .details-container input::placeholder {
   text-align: right;
@@ -329,6 +341,23 @@ a {
     flex-direction: row;
     width: 80%;
   }
+
+  .details-row {
+    justify-content: center;
+  }
+
+  .details-row:nth-child(2) {
+    justify-content: center;
+  }
+
+  .details-row:nth-child(2) input {
+    margin-right: 0;
+  }
+
+  .price {
+    justify-content: center;
+  }
+
   .other-things {
     display: block;
   }

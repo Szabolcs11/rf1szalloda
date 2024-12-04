@@ -19,8 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.realestateService.getRealEstates().subscribe((res: any) => {
-      this.realestates = res.realEstates;
-      this.realestates.slice(-4);
+      this.realestates = res.realEstates.slice(-4).reverse();
     });
   }
 }

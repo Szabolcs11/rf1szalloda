@@ -1,0 +1,50 @@
+<main class="profile-container">
+  <div class="banner">
+    <div class="banner_text">
+      <h1>PROFILOM</h1>
+    </div>
+    <img src="profil-banner.png" alt="banner" />
+  </div>
+  <div *ngIf="userData">
+    <div class="avatar">
+      <img
+        [src]="userData.AvatarUrl || 'blank-profile-picture.webp'"
+        alt="Avatar"
+      />
+    </div>
+
+    <h1>{{ userData.Name }}</h1>
+
+    <div class="description" *ngIf="userData.Description">
+      <h2>Bemutatkozás</h2>
+      <p>{{ userData.Description }}</p>
+    </div>
+
+    <div class="contact-info" *ngIf="userData.Email || userData.Phone">
+      <h2>Elérhetőség</h2>
+      <p *ngIf="userData.Email"><strong>Email:</strong> {{ userData.Email }}</p>
+      <p *ngIf="userData.Phone">
+        <strong>Telefon:</strong> {{ userData.Phone }}
+      </p>
+    </div>
+    <button id="show-update-section" (click)="toggleUpdateSection()">
+      Adataim módosítása
+    </button>
+  </div>
+
+  <section id="update-section" *ngIf="showUpdateSection">
+    <app-my-profile></app-my-profile>
+  </section>
+
+  <section>
+    <h2>Ingatlanjaim</h2>
+    <div id="my-properties">
+      <div *ngFor="let realestate of myProperties">
+        <app-realestate-card [realestate]="realestate"></app-realestate-card>
+      </div>
+    </div>
+  </section>
+  <div *ngIf="!userData">
+    <p>Betöltés...</p>
+  </div>
+</main>

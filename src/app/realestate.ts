@@ -8,7 +8,8 @@ export interface Realestate {
   Description: string;
   Type: string;
   Rooms: number;
-  Altitude: string;
-  Latitude: string;
-  PostalCode: number;
+  Altitude: number;
+  Latitude: number;
+  PostalCode: string;
+  reserved: boolean;
 }

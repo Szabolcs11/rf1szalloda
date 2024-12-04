@@ -186,7 +186,7 @@
 
   <h3>Kínálatunk:</h3>
   <div class="ads">
-    @if(!filterFound){
+    @if(realestates.length == 0){
     <h2>Sajnáljuk, nincs a keresésnek megfelelő ingatlan! :(</h2>
     }
     <div *ngFor="let realestate of realestates">

@@ -1,0 +1,44 @@
+<h1>Ingatlan feladása</h1>
+<form (ngSubmit)="createRealEstate()">
+  <label for="city">Település:</label>
+  <input id="city" [(ngModel)]="city" name="city" required />
+
+  <label for="address">Cím:</label>
+  <input id="address" [(ngModel)]="address" name="address" required />
+
+  <label for="postalCode">Irányítószám:</label>
+  <input id="postalCode" [(ngModel)]="postalCode" name="postalCode" required />
+
+  <label for="rooms">Szobák száma:</label>
+  <input id="rooms" type="number" [(ngModel)]="rooms" name="rooms" required />
+
+  <label for="squareMeters">Alapterület (m²):</label>
+  <input id="squareMeters" type="number" [(ngModel)]="squareMeters" name="squareMeters" required />
+
+  <label for="price">Ár:</label>
+  <input id="price" type="number" [(ngModel)]="price" name="price" required />
+
+  <label for="type">Épület típusa:</label>
+  <select id="type" [(ngModel)]="type" name="type" required>
+    <option value="Lakás">Lakás</option>
+    <option value="Üzlethelység">Üzlethelység</option>
+    <option value="Ház">Ház</option>
+    <option value="Iroda">Iroda</option>
+  </select>
+
+  <label>Egyéb jellemzők:</label>
+  <div *ngFor="let feature of availableFeatures">
+    <input
+      type="checkbox"
+      [value]="feature.id"
+      [(ngModel)]="feature.selected"
+      name="features"
+    />
+    {{ feature.name }}
+  </div>
+
+  <label for="description">Leírás:</label>
+  <textarea id="description" [(ngModel)]="description" name="description"></textarea>
+
+  <button type="submit">Ingatlan felvitele</button>
+</form>
