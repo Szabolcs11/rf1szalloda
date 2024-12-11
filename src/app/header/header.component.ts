@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-header',
@@ -11,11 +12,12 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   isBurgerMenuOpen: boolean = false;
-  userID =
-    localStorage.getItem('userId') == undefined
-      ? 0
-      : localStorage.getItem('userId');
-  constructor(private router: Router) {}
+  userID: string | null = null;
+  constructor(private router: Router, private userService: UserService) {
+    this.userService.userId$.subscribe((userId) => {
+      this.userID = userId;
+    });
+  }
 
   get isLoggedIn(): boolean {
     return !!localStorage.getItem('token');
@@ -29,6 +31,7 @@ export class HeaderComponent {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
     localStorage.removeItem('userName');
+    localStorage.removeItem('isAdmin');
     this.router.navigate(['/home']);
   }
 }

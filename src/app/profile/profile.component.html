@@ -30,6 +30,16 @@
     <button id="show-update-section" (click)="toggleUpdateSection()">
       Adataim módosítása
     </button>
+    <button id="show-users" *ngIf="isAdmin" routerLink="/admin-profile-list">
+      Felhasználók megtekintése
+    </button>
+    <button
+      id="show-realestates"
+      *ngIf="isAdmin"
+      routerLink="/admin-realestate-list"
+    >
+      Ingatlanok megtekintése
+    </button>
   </div>
 
   <section id="update-section" *ngIf="showUpdateSection">

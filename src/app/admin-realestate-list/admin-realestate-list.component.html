@@ -1,10 +1,12 @@
 <main>
-    <h1>Ingatlanok kilistázása</h1>
-    <div class="ads">  
+  <h1>Ingatlanok kilistázása</h1>
+  <div class="ads">
     <div *ngFor="let realestate of realestates">
-        <app-realestate-card [realestate]="realestate"></app-realestate-card>
-          <button type="submit">Ingatlan törlése</button>
-          <button type="submit">Ingatlan szerkesztése</button>
-        </div>
-      </div>
+      <app-realestate-card [realestate]="realestate"></app-realestate-card>
+      <button type="submit" (click)="deleteRealestate(realestate.id)">
+        Ingatlan törlése
+      </button>
+      <button type="submit">Ingatlan szerkesztése</button>
+    </div>
+  </div>
 </main>

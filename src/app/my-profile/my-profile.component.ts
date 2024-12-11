@@ -44,7 +44,7 @@ export class MyProfileComponent implements OnInit {
 
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    this.http.get('https://rf1.dev.kokeny-szabolcs.hu/user/profile', { headers }).subscribe(
+    this.http.get('http://localhost:2004/user/profile', { headers }).subscribe(
       (response: any) => {
         if (response.success) {
           this.userData = response.user;
@@ -108,7 +108,7 @@ export class MyProfileComponent implements OnInit {
     }
 
     this.http
-      .post('https://rf1.dev.kokeny-szabolcs.hu/user/update', requestData, { headers })
+      .post('http://localhost:2004/user/update', requestData, { headers })
       .subscribe(
         (response: any) => {
           if (response.success) {

@@ -33,7 +33,7 @@ export class RegistrationComponent {
       Phone: this.phone,
     };
 
-    this.http.post('https://rf1.dev.kokeny-szabolcs.hu/user/register', data).subscribe(
+    this.http.post('http://localhost:2004/user/register', data).subscribe(
       (response: any) => {
         if (response.success) {
           alert(response.message);

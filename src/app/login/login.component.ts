@@ -7,6 +7,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,11 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private userService: UserService
+  ) {}
 
   login() {
     if (!this.email || !this.password) {
@@ -32,12 +37,15 @@ export class LoginComponent {
       Password: this.password,
     };
 
-    this.http.post('https://rf1.dev.kokeny-szabolcs.hu/user/login', data).subscribe(
+    this.http.post('http://localhost:2004/user/login', data).subscribe(
       (response: any) => {
         if (response.success) {
           alert(response.message);
           localStorage.setItem('token', response.token);
           localStorage.setItem('userId', response.userId);
+          console.log(localStorage.getItem('userId'));
+          this.userService.setUserId(response.userId);
+          localStorage.setItem('isAdmin', response.isAdmin);
           this.router.navigate(['/home']);
         } else {
           alert(response.message);

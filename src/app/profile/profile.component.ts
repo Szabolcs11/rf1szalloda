@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyProfileComponent } from '../my-profile/my-profile.component';
@@ -14,12 +14,14 @@ import { RealestateCardComponent } from '../realestate-card/realestate-card.comp
     HttpClientModule,
     MyProfileComponent,
     RealestateCardComponent,
+    RouterModule,
   ],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
 export class UserProfileComponent implements OnInit {
   userId!: number;
+  isAdmin: boolean = localStorage.getItem('isAdmin') == '1';
   userData: any = {};
   showUpdateSection: boolean = false;
   myProperties: Realestate[] = [];
@@ -34,11 +36,12 @@ export class UserProfileComponent implements OnInit {
     } else {
       alert('Felhasználó ID nem található.');
     }
+    console.log(this.isAdmin);
   }
 
   getUserProfile() {
     this.http
-      .get(`https://rf1.dev.kokeny-szabolcs.hu/user/profile/${this.userId}`)
+      .get(`http://localhost:2004/user/profile/${this.userId}`)
       .subscribe(
         (response: any) => {
           if (response.success) {
